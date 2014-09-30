@@ -1,0 +1,3 @@
+#!/usr/bin/MathematicaScript -script
+
+Print[Total[Table[Prime[n], {n, PrimePi[2000000]}]]]
