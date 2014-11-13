@@ -25,5 +25,5 @@
   (sum pi-term a pi-next b))
 
 (define pi (* 8 (pi-sum 1 10000)))
-(display pi)
+;(display pi)
 

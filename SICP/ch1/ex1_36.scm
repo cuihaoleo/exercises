@@ -1,6 +1,6 @@
 (define tolerance 0.000001)
 
-(define (fixed-point f first-guess)
+(define (fixed-point-show-proc f first-guess)
   (define (close-enough? a b)
     (< (abs (- a b)) tolerance))
   (define (try guess)
@@ -14,12 +14,9 @@
   (newline)
   (try first-guess))
 
-(define x
-  (fixed-point
-    (lambda (x)
-      (/ (log 1000) (log x)))
-    2.0))
-
-(display "ANSWER: ")
-(display x)
-(newline)
+; I comment the example to supress output when loaded.
+;(define x
+;  (fixed-point-show-proc
+;    (lambda (x)
+;      (/ (log 1000) (log x)))
+;   2.0))

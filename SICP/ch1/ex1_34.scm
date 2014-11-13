@@ -6,5 +6,5 @@
 (display (f (lambda (z) (* z (+ z 1)))))
 
 ; this cause an error
-(f f)
+; (f f)
 

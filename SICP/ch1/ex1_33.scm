@@ -24,7 +24,7 @@
     (lambda (n) (+ n 1))
     n))
 
-(display (factorial 9))
+;(display (factorial 9))
 
 (define (prime? n)
   (define (loop i)
@@ -45,6 +45,6 @@
     b
     (lambda (n) (not (prime? n)))))
 
-(newline)
-(display (prime-sum 2 10))
-(newline)
+;(newline)
+;(display (prime-sum 2 10))
+;(newline)

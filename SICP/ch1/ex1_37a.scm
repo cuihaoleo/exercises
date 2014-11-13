@@ -1,3 +1,5 @@
+; 1-37 之迭代版本
+
 (define (cont-frac n d k)
   (define (go depth ans)
     (if (= depth 0)
@@ -9,10 +11,11 @@
     (- k 1)
     (/ (n k) (d k))))
 
-(define iaf
-  (cont-frac
-    (lambda (i) 1.0)
-    (lambda (i) 1.0)
-    10))
+(define fai
+  (/ 1
+     (cont-frac
+       (lambda (i) 1.0)
+       (lambda (i) 1.0)
+       10)))
 
-(display (/ 1 iaf))
+;(display fai)

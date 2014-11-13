@@ -19,5 +19,5 @@
     (lambda (n) (+ n 1))
     n))
 
-(display (factorial 9))
+;(display (factorial 9))
 
