@@ -24,7 +24,7 @@ fn main() {
     }
 
     for _ in 0..xlist.len() {
-        let [x, psi] = rx.recv().ok().expect(":)");
+        let [x, psi] = rx.recv().unwrap();
         println!("{:6.2} , {:16.12e}", x, psi);
     }
 }
