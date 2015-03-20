@@ -5,35 +5,30 @@ use std::iter::AdditiveIterator;
 use std::num::Float;
 use std::f64::consts::FRAC_PI_2;
 
-#[derive(Clone)]
 struct Point(f64, f64);
 
 struct LagrangeBlah {
-    level: usize,
     li_factors: Vec<f64>,
     points: Vec<Point>
 }
 
 impl LagrangeBlah {
-    fn new (points: &Vec<Point>) -> LagrangeBlah {
-        let n = points.len();
-        let li_factors = (0..n).map(
-                |i| 1.0 / (0..i).chain(i+1..n)
-                                .fold(1.0, |a, j| a*(points[i].0-points[j].0))
-            ).collect::<Vec<f64>>();
+    fn new <Iter: Iterator<Item=Point>> (points: Iter) -> LagrangeBlah {
+        let p = points.collect::<Vec<Point>>();
 
         LagrangeBlah{
-            level: n,
-            li_factors: li_factors,
-            points: points.clone()
+            li_factors: (0..p.len()).map(
+                |i| 1.0 / (0..i).chain(i+1..p.len())
+                                .fold(1.0, |a, j| a * (p[i].0 - p[j].0))
+            ).collect::<Vec<f64>>(),
+            points: p
         }
     }
 
     fn new_from_fn <F, Iter> (f: &F, xlist: Iter) -> LagrangeBlah 
-            where F: Fn(f64)->f64, Iter: Iterator<Item=f64> {
-        let points = xlist.map(|x| Point(x, f(x)))
-                          .collect::<Vec<Point>>();
-        LagrangeBlah::new(&points)
+            where F: Fn(f64)->f64,
+                  Iter: Iterator<Item=f64> {
+        LagrangeBlah::new(xlist.map(|x| Point(x, f(x))))
     }
 }
 
@@ -44,12 +39,12 @@ impl Fn<(f64, )> for LagrangeBlah {
         let x_diffs = self.points.iter()
                                  .map(|&Point(xi, _)| x - xi)
                                  .collect::<Vec<f64>>();
-        let li = |i| (0..i).chain(i+1..self.level)
+        let li = |i| (0..i).chain(i+1..self.points.len())
                            .fold(self.li_factors[i], |a, i| a * x_diffs[i]);
 
         self.points.iter()
                    .enumerate()
-                   .map(|(i, &Point(_,y))| li(i) * y)
+                   .map(|(i, &Point(_, y))| li(i) * y)
                    .sum()
     }
 }
@@ -62,7 +57,7 @@ fn check_max_delta <F, G, Iter> (f: &F, g: &G, xlist: Iter) -> f64
          .fold(0.0, |a, x| if a>=x {a} else {x})
 }
 
-fn worker <F: Fn(usize,usize)->f64> (x_getter: F) {
+fn worker <F: Fn(usize, usize)->f64> (x_getter: F) {
     let f = |x:f64| 1.0 / (1.0 + x * x);
     let test_x_list:Vec<f64> = (0..501).map(|i| -5.0 + (i as f64) / 50.0)
                                        .collect::<Vec<f64>>();
