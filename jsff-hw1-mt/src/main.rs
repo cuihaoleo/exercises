@@ -2,7 +2,7 @@
  * 并行计算版本 */
 
 #![feature(core)]
-use std::iter::AdditiveIterator;
+#![feature(slice_patterns)]
 use std::f64;
 use std::sync::mpsc;
 use std::thread;
@@ -15,7 +15,7 @@ fn psi (x: f64) -> f64 {
 }
 
 fn main() {
-    let xlist = [0.0, 0.5, 1.0, f64::consts::SQRT2, 10.0, 100.0, 300.0];
+    let xlist = [0.0, 0.5, 1.0, f64::consts::SQRT_2, 10.0, 100.0, 300.0];
     let (tx, rx) = mpsc::channel();
 
     for &x in xlist.iter() {
