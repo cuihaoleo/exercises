@@ -1,18 +1,16 @@
-#![feature(core)]
-
 fn tixing_integrate <F:Fn(f64)->f64> (f:F, a:f64, b:f64, n:usize) -> f64 {
     let h = (b - a) / (n as f64);
-    let acc:f64 = (1..n).map(|i| f(a + i as f64 * h)).sum();
+    let acc:f64 = (1..n).fold(0.0, |sm, i| sm + f(a + i as f64 * h));
     h * (acc + 0.5 * (f(a) + f(b)))
 }
 
 fn simpson_integrate <F:Fn(f64)->f64> (f:F, a:f64, b:f64, rn:usize) -> f64 {
     let n = rn + (rn & 1);
     let h = (b - a) / (n as f64);
-    let acc:f64 = (0..n/2).map(|i| {
+    let acc:f64 = (0..n/2).fold(0.0, |sm, i| {
         let x = a + ((2 * i) as f64) * h;
-        2.0 * f(x) + 4.0 * f(x+h)
-    }).sum();
+        2.0 * f(x) + 4.0 * f(x+h) + sm
+    });
     (acc + f(b) - f(a)) * h / 3.0
 }
 
