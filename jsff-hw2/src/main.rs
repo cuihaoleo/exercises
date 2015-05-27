@@ -1,8 +1,6 @@
 #![feature(unboxed_closures)]
 #![feature(core)]
 
-use std::iter::AdditiveIterator;
-use std::num::Float;
 use std::f64::consts::FRAC_PI_2;
 
 struct Point(f64, f64);
@@ -33,9 +31,7 @@ impl LagrangeBlah {
 }
 
 impl Fn<(f64, )> for LagrangeBlah {
-    type Output = f64;
-    extern "rust-call" fn call (&self, args: (f64,)) -> f64 {
-        let (x, ) = args;
+    extern "rust-call" fn call (&self, (x,): (f64,)) -> f64 {
         let x_diffs = self.points.iter()
                                  .map(|&Point(xi, _)| x - xi)
                                  .collect::<Vec<f64>>();
@@ -46,6 +42,19 @@ impl Fn<(f64, )> for LagrangeBlah {
                    .enumerate()
                    .map(|(i, &Point(_, y))| li(i) * y)
                    .sum()
+    }
+}
+
+impl FnMut<(f64, )> for LagrangeBlah {
+    extern "rust-call" fn call_mut (&mut self, args: (f64,)) -> f64 {
+        self.call(args)
+    }
+}
+
+impl FnOnce<(f64, )> for LagrangeBlah {
+    type Output = f64;
+    extern "rust-call" fn call_once (self, args: (f64,)) -> f64 {
+        self.call(args)
     }
 }
 
