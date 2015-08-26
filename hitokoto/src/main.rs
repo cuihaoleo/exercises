@@ -1,19 +1,13 @@
-#![feature(rustc_private)]
-#![feature(core)]
-#![feature(io)]
-
-extern crate serialize;
+extern crate rustc_serialize;
 extern crate hyper;
 
 use std::io::Read;
-use serialize::json;
+use rustc_serialize::json;
 
 use hyper::Client;
 use hyper::header::Connection;
-use hyper::header::ConnectionOption;
 
-#[derive(Decodable)]
-#[allow(dead_code)]
+#[derive(RustcDecodable, RustcEncodable)]
 struct Koto {
     hitokoto: String,
     cat: String,
@@ -26,19 +20,19 @@ struct Koto {
 }
 
 fn main() {
-    let mut client = Client::new();
+    let client = Client::new();
 
     let mut res = client.get("http://api.hitokoto.us/rand")
-        .header(Connection(vec![ConnectionOption::Close]))
+        .header(Connection::close())
         .send().unwrap();
 
     let mut body = String::new();
     res.read_to_string(&mut body).unwrap();
 
-    let koto: Koto = json::decode(body.as_slice()).unwrap();
+    let koto: Koto = json::decode(&body).unwrap();
     print!("{}", koto.hitokoto.trim());
 
-    let src = koto.source.as_slice().trim();
+    let src = koto.source.trim();
     if src.len() > 0 {
         println!(" --{}", src);
     }
