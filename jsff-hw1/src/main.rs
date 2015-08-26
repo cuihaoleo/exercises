@@ -1,13 +1,12 @@
 /* 计算方法作业1：计算 Sum(1/(k*(k+x))), k from 1 to +inf */
 
-#![feature(core)]
 use std::f64;
 
 fn psi (x: f64) -> f64 {
     (1..1000000).map(|ki| {
         let k = ki as f64;
         1.0/(k*(k+x))
-    }).sum()
+    }).fold(0.0, |acc, elem| acc + elem)
 }
 
 fn main() {
