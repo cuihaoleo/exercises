@@ -1,0 +1,7 @@
+[package]
+name = "ncurses-feiji"
+version = "0.1.0"
+authors = ["CUI Hao <cuihao.leo@gmail.com>"]
+
+[dependencies]
+ncurses = "5.73.0"
