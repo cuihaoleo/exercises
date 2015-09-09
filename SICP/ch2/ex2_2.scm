@@ -1,0 +1,22 @@
+(define make-point cons)
+(define x-point car) 
+(define y-point cdr)
+(define make-segment cons)
+(define start-segment car) 
+(define end-segment cdr)
+
+(define (print-point p)
+ (display "(")
+ (display (x-point p))
+ (display ",")
+ (display (y-point p))
+ (display ")"))
+
+(define p1 (make-point 1 2))
+(define p2 (make-point 3 4))
+(define seg (make-segment p1 p2))
+
+(print-point (start-segment seg))
+(newline)
+(print-point (end-segment seg))
+(newline)
