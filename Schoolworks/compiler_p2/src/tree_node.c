@@ -44,14 +44,29 @@ void _indent(int deep) {
     }
 }
 
-void _printTree(const TreeNode *node, int deep) {
-    _indent(deep);
-    printf("%s\n", node->name);
+typedef void (*print_function)(void);
+void _print1(void) { printf("  "); }
+void _print2(void) { printf("| "); }
+
+void _printTree(const TreeNode *node, int deep, print_function indent[]) {
     int i;
-    for (i=0; i<node->n_children; i++)
-        _printTree(*(node->children+i), deep+1);
+    print_function next_indent[deep+1];
+
+    for (i=0; i<deep-1; i++)
+        (next_indent[i] = indent[i])();
+
+    printf("|-%s\n", node->name);
+    next_indent[deep-1] = indent[deep-1];
+    next_indent[deep] = _print2;
+
+    for (i=0; i<node->n_children; i++) {
+        if (i+1 == node->n_children)
+            next_indent[deep] = _print1;
+        _printTree(*(node->children+i), deep+1, next_indent);
+    }
 }
 
 void printTree(const TreeNode root) {
-    _printTree(&root, 0);
+    print_function indent[1] = {_print1};
+    _printTree(&root, 1, indent);
 }
