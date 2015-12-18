@@ -9,7 +9,7 @@ all: regex
 regex:
 	$(YACC) -b $@ -o $(SRC)/$@.tab.c $@.y
 	$(LEX) -o $(SRC)/$@.lex.c $@.lex
-	$(CC) -o $(BIN)/$@ $(SRC)/tree_node.c $(SRC)/$@.lex.c $(SRC)/$@.tab.c -ll
+	$(CC) -o $(BIN)/$@ $(SRC)/tree_node.c $(SRC)/$@.lex.c $(SRC)/$@.tab.c -lfl
 
 clean:
 	rm -f $(SRC)/*.tab.h $(SRC)/*.tab.c
