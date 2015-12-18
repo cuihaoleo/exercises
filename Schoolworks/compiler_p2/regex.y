@@ -59,7 +59,7 @@ concat  : atom concat {
 };
 
 atom    : atom STAR {
-    $$.pt_node = mkNode("atom", 2, $1.pt_node, mkLeaf("OP_OR"));
+    $$.pt_node = mkNode("atom", 2, $1.pt_node, mkLeaf("OP_STAR"));
     $$.st_node = mkNode("OP_STAR", 1, $1.st_node);
 }
         | LPAREN regex RPAREN {
