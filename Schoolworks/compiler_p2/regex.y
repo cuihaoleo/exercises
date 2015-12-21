@@ -29,8 +29,6 @@ extern struct st_node_record roots;
 %token EOL
 %token LPAREN RPAREN
 
-%token-table
-
 %type <nodes> regex concat atom
 %type <charactor> CHARACTOR
 
@@ -69,7 +67,8 @@ atom    : atom STAR {
     $$.st_node = $2.st_node;
 }
         | CHARACTOR {
-    char tmp[] = {'C', 'H', 'A', 'R', '(', $1, ')', '\0'};
+    char tmp[] = "CHAR(?)";
+    tmp[5] = $1;
     $$.pt_node = mkNode("atom", 1, mkLeaf(tmp));
     $$.st_node = mkLeaf(tmp);
 };
