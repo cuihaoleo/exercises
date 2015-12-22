@@ -1,6 +1,6 @@
 SRC	 = src
 BIN	 = bin
-CC       = gcc -g3 -I$(SRC)
+CC       = gcc -g3 -std=gnu11 -I$(SRC)
 LEX      = flex -i -I 
 YACC     = bison -d -y
 

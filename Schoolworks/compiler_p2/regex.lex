@@ -2,7 +2,7 @@
 #include "regex.tab.h"
 
 void yyerror(char const *message) {
-    printf("%s\n",message);
+    fprintf(stderr, "%s\n",message);
 }
 %}
 

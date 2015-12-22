@@ -13,8 +13,7 @@ TreeNode* mkNode(const char* name, int n_children, ...) {
     va_list arguments;
     va_start(arguments, n_children);
 
-    int i;
-    for (i=0; i<n_children; i++)
+    for (int i=0; i<n_children; i++)
         (node->children)[i] = va_arg(arguments, TreeNode*);
 
     va_end(arguments);   
@@ -27,8 +26,7 @@ TreeNode *mkLeaf(const char* name) {
 }
 
 void destroyTree(TreeNode *node) {
-    int i;
-    for (i=0; i<node->n_children; i++)
+    for (int i=0; i<node->n_children; i++)
         destroyTree((node->children)[i]);
 
     free(node->name);
@@ -37,17 +35,16 @@ void destroyTree(TreeNode *node) {
 }
 
 void _printTree(const TreeNode *node, int deep, const char *indent) {
-    int i;
     char next_indent[deep+1];
 
-    for (i=0; i<deep-1; i++)
+    for (int i=0; i<deep-1; i++)
         printf("%c ", next_indent[i] = indent[i]);
 
     printf("|-%s\n", node->name);
     next_indent[deep-1] = indent[deep-1];
     next_indent[deep] = '|';
 
-    for (i=0; i<node->n_children; i++) {
+    for (int i=0; i<node->n_children; i++) {
         if (i+1 == node->n_children)
             next_indent[deep] = ' ';
         _printTree(*(node->children+i), deep+1, next_indent);
