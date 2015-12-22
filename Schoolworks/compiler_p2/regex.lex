@@ -2,7 +2,10 @@
 #include "regex.tab.h"
 
 struct st_node_record roots = {NULL, NULL};
-void yyerror(char const *);
+
+void yyerror(char const *message) {
+    printf("%s\n",message);
+}
 %}
 
 %%

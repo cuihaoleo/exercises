@@ -73,7 +73,3 @@ atom    : atom STAR {
     $$.st_node = mkLeaf(tmp);
 };
 %%
-
-void yyerror(char const *message) {
-    printf("%s\n",message);
-}
