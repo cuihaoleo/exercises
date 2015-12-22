@@ -5,10 +5,10 @@
 #include "tree_node.h"
 
 TreeNode* mkNode(const char* name, int n_children, ...) {
-    TreeNode *node = malloc(sizeof(TreeNode));
+    TreeNode *node = (TreeNode*)malloc(sizeof(TreeNode));
     node->name = strdup(name);
     node->n_children = n_children;
-    node->children = malloc(n_children * sizeof(TreeNode*));
+    node->children = (TreeNode**)malloc(n_children * sizeof(TreeNode*));
 
     va_list arguments;
     va_start(arguments, n_children);
@@ -34,14 +34,6 @@ void destroyTree(TreeNode *node) {
     free(node->name);
     free(node->children);
     free(node);
-}
-
-void _indent(int deep) {
-    int i;
-    for (i=0; i<deep; i++) {
-        putchar(' ');
-        putchar(' ');
-    }
 }
 
 typedef void (*print_function)(void);
