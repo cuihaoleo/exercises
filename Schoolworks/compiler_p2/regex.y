@@ -1,6 +1,5 @@
 %{
 #include <stdio.h>
-#include <stdarg.h>
 #include "tree_node.h"
 
 int yylex (void);
@@ -9,21 +8,17 @@ void yyerror (char const *);
 
 %code requires {
 #include "tree_node.h"
-
-struct st_node_record {
-    TreeNode *pt_node;
-    TreeNode *st_node;
-};
-
-extern struct st_node_record roots;
 }
 
 %union {
-    struct st_node_record nodes;
     char charactor;
+    struct st_node_record {
+        TreeNode *pt_node;
+        TreeNode *st_node;
+    } nodes;
 }
 
-%token CHARACTOR
+%token CHARACTOR UNKNOWN
 %token OR
 %token STAR
 %token EOL
@@ -34,7 +29,21 @@ extern struct st_node_record roots;
 
 %%
 input   : regex EOL {
-    roots = $1;
+    TreeNode *pt = $1.pt_node, *st = $1.st_node;
+
+    if (pt) {
+        printf("Parse Tree:\n");
+        printTree(*pt);
+        destroyTree(pt);
+    }
+
+    if (st) {
+        printf("\nSyntax Tree:\n");
+        printTree(*st);
+        destroyTree(st);
+    }
+
+    YYACCEPT;
 };
 
 regex   : concat OR regex {
