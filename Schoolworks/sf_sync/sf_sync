@@ -1,0 +1,6 @@
+#!/bin/bash
+
+cd "$(dirname $0)"
+
+./sf_sync.py "$1" "$2" > "log/$1/$1.log" 2>&1
+savelog -c 30 "log/$1/$1.log"
