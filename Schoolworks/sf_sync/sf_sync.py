@@ -1,23 +1,28 @@
 #!/usr/bin/env python2
 
+from __future__ import print_function
+
 import json
 import hashlib
 import os
 import sys
-import urllib2
 import tempfile
 import shelve
 import subprocess
+import codecs
 import atexit
 import shutil
-
+try:
+    from urllib2 import urlopen
+except ImportError:
+    from urllib.request import urlopen
 
 SF_BASE = "http://sourceforge.net/"
 WORKING_DIRNAME = ".sf_sync"
 
 
-# from: https://stackoverflow.com/questions/1131220/get-md5-hash-of-big-files-in-python
-def md5_for_file (f, block_size=2**20):
+# from: https://stackoverflow.com/questions/1131220/
+def md5_for_file(f, block_size=2**20):
     md5 = hashlib.md5()
     while True:
         data = f.read(block_size)
@@ -26,7 +31,8 @@ def md5_for_file (f, block_size=2**20):
         md5.update(data)
     return md5.hexdigest()
 
-def sha1_for_file (f, block_size=2**20):
+
+def sha1_for_file(f, block_size=2**20):
     sha1 = hashlib.sha1()
     while True:
         data = f.read(block_size)
@@ -37,21 +43,20 @@ def sha1_for_file (f, block_size=2**20):
 
 
 class MD5_Getter:
-
-    def __init__ (self, cache_file):
+    def __init__(self, cache_file):
         self.db = shelve.open(cache_file, "c")
 
-    def __del__ (self):
+    def __del__(self):
         self.db.close()
 
-    def remove_cache (self, path):
+    def remove_cache(self, path):
 
         k = os.path.basename(str(path))
 
         if k in self.db:
             self.db.remove(k)
 
-    def get (self, path):
+    def get(self, path):
 
         act_mtime = os.stat(path).st_mtime
         filename = str(os.path.basename(path))
@@ -68,21 +73,22 @@ class MD5_Getter:
         act_md5 = md5_for_file(open(path))
         self.db[filename] = (act_mtime, act_md5)
 
-        return act_md5 
+        return act_md5
 
 
-def check_files (proj, local_cd, md5getter):
+def check_files(proj, local_cd, md5getter):
 
     get_filelist_url = lambda path: \
         SF_BASE + "/projects/%s/files/%s/list" % (proj, path)
 
-    def sync (cd = ''):
+    def sync(cd=''):
 
         lcd = os.path.join(local_cd, cd)
         print("Checking: " + lcd)
-        
-        response = urllib2.urlopen(get_filelist_url(cd))
-        rlist = json.load(response)
+
+        response = urlopen(get_filelist_url(cd))
+        reader = codecs.getreader("utf8")
+        rlist = json.load(reader(response))
 
         try:
             local_files = os.listdir(lcd)
@@ -98,18 +104,16 @@ def check_files (proj, local_cd, md5getter):
         for f in local_files:
 
             lpath = os.path.join(lcd, f)
-            
+
             if f not in rlist:
                 if os.path.isdir(lpath):
                     dirs_to_remove.add(lpath)
                 else:
                     files_to_remove.add(lpath)
             else:
-
-
                 if str(rlist[f]["type"]) != 'd':
                     if os.path.isdir(lpath) or \
-                        md5getter.get(lpath) != str(rlist[f]['md5']):
+                            md5getter.get(lpath) != str(rlist[f]['md5']):
                         # remote is file, local is dir
                         # or: remote and local file not the same
                         files_to_update.add(tuple(rlist[f].items()))
@@ -129,8 +133,7 @@ def check_files (proj, local_cd, md5getter):
             if str(rlist[f]["type"]) == 'd':
                 sync(rlist[f]["full_path"])
 
-
-    dirs_to_remove = set() 
+    dirs_to_remove = set()
     files_to_remove = set()
     files_to_update = set()
 
@@ -139,7 +142,7 @@ def check_files (proj, local_cd, md5getter):
     return files_to_update, files_to_remove, dirs_to_remove
 
 
-def download_file (url, downto):
+def download_file(url, downto):
     cmd = ['/usr/bin/wget', "-nv", url, "-O", downto]
     p = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 
@@ -156,7 +159,7 @@ if __name__ == "__main__":
     dest = sys.argv[2]
 
     WORKING_DIR = os.path.join(dest, WORKING_DIRNAME)
-    
+
     if not os.path.isdir(WORKING_DIR):
         print("I work with this directory for the first time.")
         print("Create working directory...")
@@ -165,27 +168,28 @@ if __name__ == "__main__":
     md5cache_file = os.path.join(WORKING_DIR, "md5")
     md5getter = MD5_Getter(md5cache_file)
     files_to_update, files_to_remove, dirs_to_remove = \
-                check_files(proj, dest, md5getter)
+        check_files(proj, dest, md5getter)
 
     DOWNLOAD_DIR = tempfile.mkdtemp(dir=WORKING_DIR)
     atexit.register(lambda: shutil.rmtree(DOWNLOAD_DIR))
 
     for f in files_to_update:
-
         info = dict(f)
 
         print("[UPDATE] %s" % info['full_path'])
 
         downto = tempfile.NamedTemporaryFile(dir=DOWNLOAD_DIR).name
         url = info['download_url']
-        
+
         if download_file(url, downto):
+            print("Checking SHA1... ", end="")
 
-            print "Checking SHA1... ",
-
-            if sha1_for_file(open(downto)) == str(info['sha1']):
+            if sha1_for_file(open(downto, "rb")) == str(info['sha1']):
                 print("Success!")
                 actpath = os.path.join(dest, info['full_path'])
+                dirname = os.path.dirname(actpath)
+                if not os.path.isdir(dirname):
+                    os.makedirs(dirname)
                 shutil.move(downto, actpath)
             else:
                 print("Fail!")
@@ -200,5 +204,4 @@ if __name__ == "__main__":
         try:
             os.rmdir(d)
         except OSError:
-            pass # Do nothing for security.
-
+            pass  # Do nothing for security.
