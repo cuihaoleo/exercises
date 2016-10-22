@@ -1,0 +1,8 @@
+[package]
+name = "hitokoto"
+version = "0.0.3"
+authors = ["CUI Hao <cuihao.leo@gmail.com>"]
+
+[dependencies]
+hyper = "0.6.10"
+rustc-serialize = "0.3.16"
