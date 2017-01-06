@@ -76,7 +76,7 @@ function init_st_xk_dx_MAIN() {
       return;
     }
 
-    var onclick_src = $(this).undefinedattr("onclick");
+    var onclick_src = $(this).attr("onclick");
     var args = eval(
       '['+onclick_src.match(/^return querykc\((.*)\);$/)[1]+']');
     var kc_id = args[3],
@@ -162,10 +162,12 @@ function initquerycjxx_MAIN () {
   });
 }
 
-if (document.URL.search("init_st_xk_gwc.do") != -1) {
-  init_st_xk_gwc_MAIN();
-} else if (document.URL.search("init_st_xk_dx.do") != -1) {
-  init_st_xk_dx_MAIN();
-} else if (document.URL.search("initquerycjxx.do") != -1) {
-  initquerycjxx_MAIN();
-}
+window.addEventListener('load', function() {
+  if (document.URL.search("init_st_xk_gwc.do") != -1) {
+    init_st_xk_gwc_MAIN();
+  } else if (document.URL.search("init_st_xk_dx.do") != -1) {
+    init_st_xk_dx_MAIN();
+  } else if (document.URL.search("initquerycjxx.do") != -1) {
+    initquerycjxx_MAIN();
+  }
+}, false);
