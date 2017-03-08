@@ -1,3 +1,4 @@
+# gcc -S -O2 -m32 -fno-omit-frame-pointer -fno-asynchronous-unwind-tables p61_var_prod_ele.c
 	.file	"p61_var_prod_ele.c"
 	.text
 	.p2align 4,,15
