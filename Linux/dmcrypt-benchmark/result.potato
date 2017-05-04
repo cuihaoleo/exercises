@@ -1,0 +1,848 @@
+     aes-cbc   128b   140.7 MiB/s   162.3 MiB/s
+     aes-cbc   192b   122.9 MiB/s   141.7 MiB/s
+     aes-cbc   256b   108.7 MiB/s   125.1 MiB/s
+     aes-ctr   128b   158.2 MiB/s   158.5 MiB/s
+     aes-ctr   192b   136.3 MiB/s   135.9 MiB/s
+     aes-ctr   256b   119.1 MiB/s   118.9 MiB/s
+     aes-ecb   128b   169.1 MiB/s   172.4 MiB/s
+     aes-ecb   192b   144.3 MiB/s   143.7 MiB/s
+     aes-ecb   256b   126.3 MiB/s   127.4 MiB/s
+     aes-lrw   256b   152.8 MiB/s   154.7 MiB/s
+     aes-lrw   320b   130.9 MiB/s   133.3 MiB/s
+     aes-lrw   384b   116.9 MiB/s   118.0 MiB/s
+     aes-pcbc   128b    99.3 MiB/s   131.0 MiB/s
+     aes-pcbc   192b   114.2 MiB/s   115.1 MiB/s
+     aes-pcbc   256b   100.0 MiB/s    93.3 MiB/s
+     aes-xts   256b   162.8 MiB/s   164.1 MiB/s
+     aes-xts   384b   139.7 MiB/s   140.6 MiB/s
+     aes-xts   512b   123.0 MiB/s   115.8 MiB/s
+  anubis-cbc   128b   104.7 MiB/s   115.4 MiB/s
+  anubis-cbc   160b    99.0 MiB/s   108.7 MiB/s
+  anubis-cbc   192b    93.6 MiB/s   102.0 MiB/s
+  anubis-cbc   224b    89.2 MiB/s    97.0 MiB/s
+  anubis-cbc   256b    78.1 MiB/s    64.6 MiB/s
+  anubis-cbc   288b    81.3 MiB/s    86.8 MiB/s
+  anubis-cbc   320b    77.6 MiB/s    82.6 MiB/s
+  anubis-ctr   128b   114.5 MiB/s   115.4 MiB/s
+  anubis-ctr   160b   107.1 MiB/s   108.7 MiB/s
+  anubis-ctr   192b    95.9 MiB/s    74.3 MiB/s
+  anubis-ctr   224b    95.2 MiB/s    95.1 MiB/s
+  anubis-ctr   256b    91.1 MiB/s    91.1 MiB/s
+  anubis-ctr   288b    87.1 MiB/s    87.0 MiB/s
+  anubis-ctr   320b    82.9 MiB/s    82.6 MiB/s
+  anubis-ecb   128b    67.0 MiB/s   115.8 MiB/s
+  anubis-ecb   160b   115.8 MiB/s   115.4 MiB/s
+  anubis-ecb   192b   108.4 MiB/s   108.1 MiB/s
+  anubis-ecb   224b   102.2 MiB/s    95.5 MiB/s
+  anubis-ecb   256b    94.6 MiB/s    86.2 MiB/s
+  anubis-ecb   288b    76.8 MiB/s    92.6 MiB/s
+  anubis-ecb   320b    87.4 MiB/s    87.8 MiB/s
+  anubis-lrw   256b   115.1 MiB/s   114.7 MiB/s
+  anubis-lrw   288b   108.3 MiB/s   108.2 MiB/s
+  anubis-lrw   320b   102.0 MiB/s    86.2 MiB/s
+  anubis-lrw   352b    80.0 MiB/s    96.8 MiB/s
+  anubis-lrw   384b    91.3 MiB/s    91.6 MiB/s
+  anubis-lrw   416b    86.0 MiB/s    86.9 MiB/s
+  anubis-lrw   448b    81.5 MiB/s    83.1 MiB/s
+  anubis-pcbc   128b   101.4 MiB/s    83.6 MiB/s
+  anubis-pcbc   160b    78.4 MiB/s    95.5 MiB/s
+  anubis-pcbc   192b    90.8 MiB/s    90.9 MiB/s
+  anubis-pcbc   224b    63.4 MiB/s    49.9 MiB/s
+  anubis-pcbc   256b    82.0 MiB/s    82.2 MiB/s
+  anubis-pcbc   288b    67.2 MiB/s    79.1 MiB/s
+  anubis-pcbc   320b    75.7 MiB/s    75.7 MiB/s
+  anubis-xts   256b   116.3 MiB/s   116.2 MiB/s
+  anubis-xts   320b   109.5 MiB/s   109.4 MiB/s
+  anubis-xts   384b   102.5 MiB/s   102.5 MiB/s
+  anubis-xts   448b    97.3 MiB/s    94.3 MiB/s
+  anubis-xts   512b    92.4 MiB/s    92.3 MiB/s
+  anubis-xts   576b    88.1 MiB/s    87.8 MiB/s
+  anubis-xts   640b    83.8 MiB/s    83.6 MiB/s
+    arc4-ecb     8b   336.8 MiB/s   338.1 MiB/s
+    arc4-ecb    16b   335.4 MiB/s   337.2 MiB/s
+    arc4-ecb    24b   333.8 MiB/s   336.9 MiB/s
+    arc4-ecb    32b   336.5 MiB/s   337.8 MiB/s
+    arc4-ecb    40b   336.3 MiB/s   337.2 MiB/s
+    arc4-ecb    48b   336.4 MiB/s   337.4 MiB/s
+    arc4-ecb    56b   336.1 MiB/s   337.3 MiB/s
+    arc4-ecb    64b   335.5 MiB/s   337.4 MiB/s
+    arc4-ecb    72b   335.9 MiB/s   336.7 MiB/s
+    arc4-ecb    80b   336.2 MiB/s   337.1 MiB/s
+    arc4-ecb    88b   335.2 MiB/s   313.8 MiB/s
+    arc4-ecb    96b   335.7 MiB/s   336.9 MiB/s
+    arc4-ecb   104b   335.1 MiB/s   336.5 MiB/s
+    arc4-ecb   112b   335.8 MiB/s   337.3 MiB/s
+    arc4-ecb   120b   336.4 MiB/s   337.8 MiB/s
+    arc4-ecb   128b   299.3 MiB/s   276.9 MiB/s
+    arc4-ecb   136b   337.5 MiB/s   334.3 MiB/s
+    arc4-ecb   144b   336.7 MiB/s   335.8 MiB/s
+    arc4-ecb   152b   336.4 MiB/s   335.9 MiB/s
+    arc4-ecb   160b   335.5 MiB/s   335.5 MiB/s
+    arc4-ecb   168b   336.1 MiB/s   336.2 MiB/s
+    arc4-ecb   176b   336.7 MiB/s   335.9 MiB/s
+    arc4-ecb   184b   336.4 MiB/s   336.0 MiB/s
+    arc4-ecb   192b   336.8 MiB/s   336.6 MiB/s
+    arc4-ecb   200b   336.3 MiB/s   336.7 MiB/s
+    arc4-ecb   208b   335.9 MiB/s   335.4 MiB/s
+    arc4-ecb   216b   335.9 MiB/s   335.7 MiB/s
+    arc4-ecb   224b   336.8 MiB/s   336.8 MiB/s
+    arc4-ecb   232b   336.4 MiB/s   337.0 MiB/s
+    arc4-ecb   240b   336.3 MiB/s   336.1 MiB/s
+    arc4-ecb   248b   336.9 MiB/s   336.8 MiB/s
+    arc4-ecb   256b   336.2 MiB/s   336.2 MiB/s
+    arc4-ecb   264b   336.4 MiB/s   336.3 MiB/s
+    arc4-ecb   272b   336.1 MiB/s   336.0 MiB/s
+    arc4-ecb   280b   336.3 MiB/s   336.8 MiB/s
+    arc4-ecb   288b   336.9 MiB/s   336.7 MiB/s
+    arc4-ecb   296b   336.4 MiB/s   336.3 MiB/s
+    arc4-ecb   304b   335.6 MiB/s   336.1 MiB/s
+    arc4-ecb   312b   336.0 MiB/s   336.1 MiB/s
+    arc4-ecb   320b   335.8 MiB/s   336.0 MiB/s
+    arc4-ecb   328b   335.6 MiB/s   336.2 MiB/s
+    arc4-ecb   336b   337.1 MiB/s   336.8 MiB/s
+    arc4-ecb   344b   336.6 MiB/s   337.0 MiB/s
+    arc4-ecb   352b   337.1 MiB/s   334.7 MiB/s
+    arc4-ecb   360b   336.7 MiB/s   336.7 MiB/s
+    arc4-ecb   368b   337.0 MiB/s   336.8 MiB/s
+    arc4-ecb   376b   336.7 MiB/s   337.4 MiB/s
+    arc4-ecb   384b   336.1 MiB/s   336.6 MiB/s
+    arc4-ecb   392b   337.0 MiB/s   285.3 MiB/s
+    arc4-ecb   400b   290.8 MiB/s   335.1 MiB/s
+    arc4-ecb   408b   334.4 MiB/s   335.3 MiB/s
+    arc4-ecb   416b   334.6 MiB/s   336.2 MiB/s
+    arc4-ecb   424b   334.0 MiB/s   334.6 MiB/s
+    arc4-ecb   432b   334.4 MiB/s   335.9 MiB/s
+    arc4-ecb   440b   312.5 MiB/s   335.9 MiB/s
+    arc4-ecb   448b   332.5 MiB/s   335.5 MiB/s
+    arc4-ecb   456b   334.3 MiB/s   335.7 MiB/s
+    arc4-ecb   464b   334.4 MiB/s   335.8 MiB/s
+    arc4-ecb   472b   333.2 MiB/s   335.3 MiB/s
+    arc4-ecb   480b   333.3 MiB/s   335.6 MiB/s
+    arc4-ecb   488b   334.5 MiB/s   335.8 MiB/s
+    arc4-ecb   496b   333.3 MiB/s   334.9 MiB/s
+    arc4-ecb   504b   334.3 MiB/s   335.5 MiB/s
+    arc4-ecb   512b   333.3 MiB/s   334.4 MiB/s
+    arc4-ecb   520b   325.9 MiB/s   336.1 MiB/s
+    arc4-ecb   528b   332.0 MiB/s   335.2 MiB/s
+    arc4-ecb   536b   334.9 MiB/s   336.1 MiB/s
+    arc4-ecb   544b   334.2 MiB/s   335.4 MiB/s
+    arc4-ecb   552b   333.9 MiB/s   335.6 MiB/s
+    arc4-ecb   560b   334.5 MiB/s   335.9 MiB/s
+    arc4-ecb   568b   333.6 MiB/s   335.4 MiB/s
+    arc4-ecb   576b   334.3 MiB/s   335.7 MiB/s
+    arc4-ecb   584b   333.8 MiB/s   334.7 MiB/s
+    arc4-ecb   592b   333.8 MiB/s   335.1 MiB/s
+    arc4-ecb   600b   333.9 MiB/s   335.4 MiB/s
+    arc4-ecb   608b   334.0 MiB/s   335.5 MiB/s
+    arc4-ecb   616b   334.5 MiB/s   336.5 MiB/s
+    arc4-ecb   624b   335.0 MiB/s   335.1 MiB/s
+    arc4-ecb   632b   334.4 MiB/s   336.1 MiB/s
+    arc4-ecb   640b   334.4 MiB/s   335.9 MiB/s
+    arc4-ecb   648b   335.1 MiB/s   336.1 MiB/s
+    arc4-ecb   656b   253.8 MiB/s   321.2 MiB/s
+    arc4-ecb   664b   337.3 MiB/s   338.9 MiB/s
+    arc4-ecb   672b   337.4 MiB/s   337.7 MiB/s
+    arc4-ecb   680b   337.6 MiB/s   338.8 MiB/s
+    arc4-ecb   688b   336.3 MiB/s   337.3 MiB/s
+    arc4-ecb   696b   337.9 MiB/s   338.0 MiB/s
+    arc4-ecb   704b   337.7 MiB/s   338.2 MiB/s
+    arc4-ecb   712b   337.8 MiB/s   338.1 MiB/s
+    arc4-ecb   720b   336.6 MiB/s   337.2 MiB/s
+    arc4-ecb   728b   337.4 MiB/s   337.5 MiB/s
+    arc4-ecb   736b   336.7 MiB/s   337.5 MiB/s
+    arc4-ecb   744b   337.7 MiB/s   337.8 MiB/s
+    arc4-ecb   752b   337.2 MiB/s   337.8 MiB/s
+    arc4-ecb   760b   337.1 MiB/s   337.2 MiB/s
+    arc4-ecb   768b   335.0 MiB/s   336.9 MiB/s
+    arc4-ecb   776b   336.8 MiB/s   337.3 MiB/s
+    arc4-ecb   784b   336.8 MiB/s   337.6 MiB/s
+    arc4-ecb   792b   337.6 MiB/s   337.9 MiB/s
+    arc4-ecb   800b   337.3 MiB/s   338.1 MiB/s
+    arc4-ecb   808b   334.1 MiB/s   337.5 MiB/s
+    arc4-ecb   816b   337.7 MiB/s   337.7 MiB/s
+    arc4-ecb   824b   337.2 MiB/s   337.4 MiB/s
+    arc4-ecb   832b   337.1 MiB/s   337.6 MiB/s
+    arc4-ecb   840b   337.4 MiB/s   337.6 MiB/s
+    arc4-ecb   848b   336.7 MiB/s   337.3 MiB/s
+    arc4-ecb   856b   331.0 MiB/s   336.8 MiB/s
+    arc4-ecb   864b   337.9 MiB/s   337.8 MiB/s
+    arc4-ecb   872b   330.8 MiB/s   337.0 MiB/s
+    arc4-ecb   880b   337.0 MiB/s   337.2 MiB/s
+    arc4-ecb   888b   336.0 MiB/s   335.7 MiB/s
+    arc4-ecb   896b   336.7 MiB/s   336.6 MiB/s
+    arc4-ecb   904b   337.3 MiB/s   337.1 MiB/s
+    arc4-ecb   912b   337.7 MiB/s   276.7 MiB/s
+    arc4-ecb   920b   285.7 MiB/s   336.4 MiB/s
+    arc4-ecb   928b   336.4 MiB/s   337.3 MiB/s
+    arc4-ecb   936b   336.8 MiB/s   337.5 MiB/s
+    arc4-ecb   944b   336.2 MiB/s   336.7 MiB/s
+    arc4-ecb   952b   336.3 MiB/s   337.1 MiB/s
+    arc4-ecb   960b   337.1 MiB/s   338.1 MiB/s
+    arc4-ecb   968b   336.1 MiB/s   337.2 MiB/s
+    arc4-ecb   976b   336.8 MiB/s   337.5 MiB/s
+    arc4-ecb   984b   336.2 MiB/s   337.3 MiB/s
+    arc4-ecb   992b   336.9 MiB/s   336.9 MiB/s
+    arc4-ecb  1000b   336.4 MiB/s   337.3 MiB/s
+    arc4-ecb  1008b   335.6 MiB/s   336.6 MiB/s
+    arc4-ecb  1016b   336.3 MiB/s   337.1 MiB/s
+    arc4-ecb  1024b   336.2 MiB/s   337.4 MiB/s
+    arc4-ecb  1032b   336.1 MiB/s   337.4 MiB/s
+    arc4-ecb  1040b   336.1 MiB/s   337.2 MiB/s
+    arc4-ecb  1048b   336.1 MiB/s   337.3 MiB/s
+    arc4-ecb  1056b   335.7 MiB/s   336.7 MiB/s
+    arc4-ecb  1064b   336.5 MiB/s   337.1 MiB/s
+    arc4-ecb  1072b   336.5 MiB/s   337.5 MiB/s
+    arc4-ecb  1080b   336.2 MiB/s   336.9 MiB/s
+    arc4-ecb  1088b   336.5 MiB/s   337.3 MiB/s
+    arc4-ecb  1096b   335.8 MiB/s   337.0 MiB/s
+    arc4-ecb  1104b   336.7 MiB/s   338.1 MiB/s
+    arc4-ecb  1112b   335.6 MiB/s   336.8 MiB/s
+    arc4-ecb  1120b   335.9 MiB/s   336.8 MiB/s
+    arc4-ecb  1128b   336.2 MiB/s   337.1 MiB/s
+    arc4-ecb  1136b   335.9 MiB/s   337.3 MiB/s
+    arc4-ecb  1144b   336.3 MiB/s   337.4 MiB/s
+    arc4-ecb  1152b   335.7 MiB/s   337.1 MiB/s
+    arc4-ecb  1160b   336.3 MiB/s   337.6 MiB/s
+    arc4-ecb  1168b   336.1 MiB/s   337.5 MiB/s
+    arc4-ecb  1176b   257.4 MiB/s   303.7 MiB/s
+    arc4-ecb  1184b   334.7 MiB/s   335.2 MiB/s
+    arc4-ecb  1192b   335.1 MiB/s   334.9 MiB/s
+    arc4-ecb  1200b   334.2 MiB/s   334.6 MiB/s
+    arc4-ecb  1208b   334.6 MiB/s   334.2 MiB/s
+    arc4-ecb  1216b   335.4 MiB/s   335.2 MiB/s
+    arc4-ecb  1224b   335.0 MiB/s   335.1 MiB/s
+    arc4-ecb  1232b   333.7 MiB/s   331.4 MiB/s
+    arc4-ecb  1240b   317.5 MiB/s   320.6 MiB/s
+    arc4-ecb  1248b   334.6 MiB/s   334.9 MiB/s
+    arc4-ecb  1256b   335.6 MiB/s   335.6 MiB/s
+    arc4-ecb  1264b   335.0 MiB/s   335.8 MiB/s
+    arc4-ecb  1272b   334.3 MiB/s   334.6 MiB/s
+    arc4-ecb  1280b   334.3 MiB/s   334.1 MiB/s
+    arc4-ecb  1288b   334.1 MiB/s   334.3 MiB/s
+    arc4-ecb  1296b   334.9 MiB/s   334.8 MiB/s
+    arc4-ecb  1304b   335.5 MiB/s   335.1 MiB/s
+    arc4-ecb  1312b   334.9 MiB/s   335.1 MiB/s
+    arc4-ecb  1320b   334.7 MiB/s   334.8 MiB/s
+    arc4-ecb  1328b   335.1 MiB/s   335.2 MiB/s
+    arc4-ecb  1336b   334.1 MiB/s   334.2 MiB/s
+    arc4-ecb  1344b   334.0 MiB/s   335.2 MiB/s
+    arc4-ecb  1352b   334.3 MiB/s   334.3 MiB/s
+    arc4-ecb  1360b   334.9 MiB/s   333.9 MiB/s
+    arc4-ecb  1368b   334.5 MiB/s   334.7 MiB/s
+    arc4-ecb  1376b   334.8 MiB/s   334.4 MiB/s
+    arc4-ecb  1384b   334.9 MiB/s   334.8 MiB/s
+    arc4-ecb  1392b   335.1 MiB/s   334.9 MiB/s
+    arc4-ecb  1400b   334.3 MiB/s   334.3 MiB/s
+    arc4-ecb  1408b   323.3 MiB/s   335.3 MiB/s
+    arc4-ecb  1416b   334.1 MiB/s   334.1 MiB/s
+    arc4-ecb  1424b   333.7 MiB/s   333.5 MiB/s
+    arc4-ecb  1432b   334.1 MiB/s   261.7 MiB/s
+    arc4-ecb  1440b   319.0 MiB/s   337.0 MiB/s
+    arc4-ecb  1448b   335.6 MiB/s   336.6 MiB/s
+    arc4-ecb  1456b   336.7 MiB/s   336.7 MiB/s
+    arc4-ecb  1464b   336.9 MiB/s   337.4 MiB/s
+    arc4-ecb  1472b   336.7 MiB/s   336.7 MiB/s
+    arc4-ecb  1480b   336.0 MiB/s   336.8 MiB/s
+    arc4-ecb  1488b   335.7 MiB/s   336.9 MiB/s
+    arc4-ecb  1496b   336.6 MiB/s   337.9 MiB/s
+    arc4-ecb  1504b   336.6 MiB/s   337.6 MiB/s
+    arc4-ecb  1512b   335.2 MiB/s   336.7 MiB/s
+    arc4-ecb  1520b   336.2 MiB/s   337.0 MiB/s
+    arc4-ecb  1528b   335.6 MiB/s   337.0 MiB/s
+    arc4-ecb  1536b   335.3 MiB/s   336.6 MiB/s
+    arc4-ecb  1544b   335.9 MiB/s   337.0 MiB/s
+    arc4-ecb  1552b   334.8 MiB/s   336.4 MiB/s
+    arc4-ecb  1560b   334.6 MiB/s   335.7 MiB/s
+    arc4-ecb  1568b   335.7 MiB/s   336.7 MiB/s
+    arc4-ecb  1576b   336.1 MiB/s   337.1 MiB/s
+    arc4-ecb  1584b   336.4 MiB/s   337.4 MiB/s
+    arc4-ecb  1592b   336.0 MiB/s   336.9 MiB/s
+    arc4-ecb  1600b   336.4 MiB/s   337.0 MiB/s
+    arc4-ecb  1608b   335.2 MiB/s   336.4 MiB/s
+    arc4-ecb  1616b   332.6 MiB/s   336.5 MiB/s
+    arc4-ecb  1624b   336.0 MiB/s   337.2 MiB/s
+    arc4-ecb  1632b   336.2 MiB/s   337.7 MiB/s
+    arc4-ecb  1640b   336.5 MiB/s   337.5 MiB/s
+    arc4-ecb  1648b   336.5 MiB/s   337.7 MiB/s
+    arc4-ecb  1656b   336.4 MiB/s   337.3 MiB/s
+    arc4-ecb  1664b   336.7 MiB/s   337.8 MiB/s
+    arc4-ecb  1672b   336.3 MiB/s   337.1 MiB/s
+    arc4-ecb  1680b   336.6 MiB/s   337.6 MiB/s
+    arc4-ecb  1688b   336.7 MiB/s   338.0 MiB/s
+    arc4-ecb  1696b   337.4 MiB/s   338.2 MiB/s
+    arc4-ecb  1704b   255.9 MiB/s   329.6 MiB/s
+    arc4-ecb  1712b   337.0 MiB/s   337.1 MiB/s
+    arc4-ecb  1720b   336.7 MiB/s   335.5 MiB/s
+    arc4-ecb  1728b   337.7 MiB/s   337.4 MiB/s
+    arc4-ecb  1736b   337.6 MiB/s   336.9 MiB/s
+    arc4-ecb  1744b   337.1 MiB/s   336.6 MiB/s
+    arc4-ecb  1752b   336.9 MiB/s   204.9 MiB/s
+    arc4-ecb  1760b   334.8 MiB/s   335.5 MiB/s
+    arc4-ecb  1768b   334.7 MiB/s   334.8 MiB/s
+    arc4-ecb  1776b   334.6 MiB/s   335.0 MiB/s
+    arc4-ecb  1784b   335.3 MiB/s   334.9 MiB/s
+    arc4-ecb  1792b   335.1 MiB/s   335.0 MiB/s
+    arc4-ecb  1800b   335.6 MiB/s   335.5 MiB/s
+    arc4-ecb  1808b   335.4 MiB/s   335.5 MiB/s
+    arc4-ecb  1816b   335.2 MiB/s   334.5 MiB/s
+    arc4-ecb  1824b   335.7 MiB/s   335.1 MiB/s
+    arc4-ecb  1832b   335.6 MiB/s   336.0 MiB/s
+    arc4-ecb  1840b   335.2 MiB/s   335.5 MiB/s
+    arc4-ecb  1848b   335.7 MiB/s   336.3 MiB/s
+    arc4-ecb  1856b   335.5 MiB/s   335.2 MiB/s
+    arc4-ecb  1864b   332.8 MiB/s   336.2 MiB/s
+    arc4-ecb  1872b   336.4 MiB/s   336.0 MiB/s
+    arc4-ecb  1880b   337.4 MiB/s   336.7 MiB/s
+    arc4-ecb  1888b   336.3 MiB/s   336.2 MiB/s
+    arc4-ecb  1896b   336.0 MiB/s   335.7 MiB/s
+    arc4-ecb  1904b   336.9 MiB/s   336.7 MiB/s
+    arc4-ecb  1912b   335.6 MiB/s   336.5 MiB/s
+    arc4-ecb  1920b   336.5 MiB/s   336.5 MiB/s
+    arc4-ecb  1928b   337.1 MiB/s   337.4 MiB/s
+    arc4-ecb  1936b   336.8 MiB/s   336.5 MiB/s
+    arc4-ecb  1944b   337.0 MiB/s   337.0 MiB/s
+    arc4-ecb  1952b   336.9 MiB/s   336.6 MiB/s
+    arc4-ecb  1960b   337.5 MiB/s   231.7 MiB/s
+    arc4-ecb  1968b   336.7 MiB/s   335.8 MiB/s
+    arc4-ecb  1976b   336.7 MiB/s   335.2 MiB/s
+    arc4-ecb  1984b   336.0 MiB/s   335.8 MiB/s
+    arc4-ecb  1992b   337.3 MiB/s   335.2 MiB/s
+    arc4-ecb  2000b   337.6 MiB/s   336.3 MiB/s
+    arc4-ecb  2008b   333.5 MiB/s   336.4 MiB/s
+    arc4-ecb  2016b   337.3 MiB/s   336.3 MiB/s
+    arc4-ecb  2024b   336.3 MiB/s   336.0 MiB/s
+    arc4-ecb  2032b   336.6 MiB/s   336.5 MiB/s
+    arc4-ecb  2040b   337.2 MiB/s   336.2 MiB/s
+    arc4-ecb  2048b   336.7 MiB/s   335.7 MiB/s
+blowfish-cbc    32b    77.2 MiB/s   225.6 MiB/s
+blowfish-cbc    40b    77.2 MiB/s   225.7 MiB/s
+blowfish-cbc    48b    77.2 MiB/s   225.2 MiB/s
+blowfish-cbc    56b    77.2 MiB/s   225.0 MiB/s
+blowfish-cbc    64b    77.2 MiB/s   225.3 MiB/s
+blowfish-cbc    72b    77.2 MiB/s   225.0 MiB/s
+blowfish-cbc    80b    77.2 MiB/s   225.3 MiB/s
+blowfish-cbc    88b    77.2 MiB/s   225.1 MiB/s
+blowfish-cbc    96b    77.2 MiB/s   225.6 MiB/s
+blowfish-cbc   104b    77.2 MiB/s   225.3 MiB/s
+blowfish-cbc   112b    77.2 MiB/s   225.2 MiB/s
+blowfish-cbc   120b    77.2 MiB/s   225.3 MiB/s
+blowfish-cbc   128b    77.2 MiB/s   225.1 MiB/s
+blowfish-cbc   136b    77.2 MiB/s   225.3 MiB/s
+blowfish-cbc   144b    77.2 MiB/s   224.9 MiB/s
+blowfish-cbc   152b    77.1 MiB/s   225.0 MiB/s
+blowfish-cbc   160b    77.2 MiB/s   225.1 MiB/s
+blowfish-cbc   168b    77.2 MiB/s   213.4 MiB/s
+blowfish-cbc   176b    74.2 MiB/s   223.3 MiB/s
+blowfish-cbc   184b    77.2 MiB/s   225.6 MiB/s
+blowfish-cbc   192b    77.1 MiB/s   225.7 MiB/s
+blowfish-cbc   200b    77.1 MiB/s   225.6 MiB/s
+blowfish-cbc   208b    77.2 MiB/s   225.8 MiB/s
+blowfish-cbc   216b    77.1 MiB/s   225.6 MiB/s
+blowfish-cbc   224b    77.1 MiB/s   225.7 MiB/s
+blowfish-cbc   232b    77.2 MiB/s   225.9 MiB/s
+blowfish-cbc   240b    77.2 MiB/s   225.9 MiB/s
+blowfish-cbc   248b    77.2 MiB/s   226.3 MiB/s
+blowfish-cbc   256b    77.2 MiB/s   225.9 MiB/s
+blowfish-cbc   264b    77.1 MiB/s   225.8 MiB/s
+blowfish-cbc   272b    77.2 MiB/s   225.4 MiB/s
+blowfish-cbc   280b    77.1 MiB/s   225.8 MiB/s
+blowfish-cbc   288b    77.1 MiB/s   225.8 MiB/s
+blowfish-cbc   296b    77.1 MiB/s   225.7 MiB/s
+blowfish-cbc   304b    77.1 MiB/s   225.8 MiB/s
+blowfish-cbc   312b    77.2 MiB/s   225.9 MiB/s
+blowfish-cbc   320b    77.1 MiB/s   225.6 MiB/s
+blowfish-cbc   328b    77.1 MiB/s   225.3 MiB/s
+blowfish-cbc   336b    77.1 MiB/s   225.7 MiB/s
+blowfish-cbc   344b    77.1 MiB/s   225.5 MiB/s
+blowfish-cbc   352b    77.0 MiB/s   136.7 MiB/s
+blowfish-cbc   360b    76.8 MiB/s   184.8 MiB/s
+blowfish-cbc   368b    77.0 MiB/s   224.4 MiB/s
+blowfish-cbc   376b    76.9 MiB/s   223.7 MiB/s
+blowfish-cbc   384b    76.9 MiB/s   224.4 MiB/s
+blowfish-cbc   392b    77.0 MiB/s   224.6 MiB/s
+blowfish-cbc   400b    77.0 MiB/s   224.5 MiB/s
+blowfish-cbc   408b    77.1 MiB/s   224.9 MiB/s
+blowfish-cbc   416b    77.1 MiB/s   225.0 MiB/s
+blowfish-cbc   424b    77.0 MiB/s   224.1 MiB/s
+blowfish-cbc   432b    75.6 MiB/s   180.5 MiB/s
+blowfish-cbc   440b    77.3 MiB/s   192.4 MiB/s
+blowfish-cbc   448b    74.2 MiB/s   225.4 MiB/s
+blowfish-ctr    32b   231.5 MiB/s   227.5 MiB/s
+blowfish-ctr    40b   227.1 MiB/s   230.4 MiB/s
+blowfish-ctr    48b   153.8 MiB/s   230.0 MiB/s
+blowfish-ctr    56b   228.1 MiB/s   230.6 MiB/s
+blowfish-ctr    64b   228.0 MiB/s   230.4 MiB/s
+blowfish-ctr    72b   229.5 MiB/s   158.9 MiB/s
+blowfish-ctr    80b   229.8 MiB/s   226.8 MiB/s
+blowfish-ctr    88b   229.8 MiB/s   228.4 MiB/s
+blowfish-ctr    96b   229.8 MiB/s   229.7 MiB/s
+blowfish-ctr   104b   163.1 MiB/s   230.6 MiB/s
+blowfish-ctr   112b   228.8 MiB/s   228.5 MiB/s
+blowfish-ctr   120b   229.9 MiB/s   229.2 MiB/s
+blowfish-ctr   128b   230.6 MiB/s   160.1 MiB/s
+blowfish-ctr   136b   226.3 MiB/s   230.0 MiB/s
+blowfish-ctr   144b   228.2 MiB/s   230.5 MiB/s
+blowfish-ctr   152b   227.8 MiB/s   230.6 MiB/s
+blowfish-ctr   160b   152.1 MiB/s   227.3 MiB/s
+blowfish-ctr   168b   229.0 MiB/s   229.4 MiB/s
+blowfish-ctr   176b   229.4 MiB/s   229.3 MiB/s
+blowfish-ctr   184b   229.6 MiB/s   229.9 MiB/s
+blowfish-ctr   192b   229.2 MiB/s   219.7 MiB/s
+blowfish-ctr   200b   220.7 MiB/s   229.3 MiB/s
+blowfish-ctr   208b   229.7 MiB/s   229.5 MiB/s
+blowfish-ctr   216b   229.4 MiB/s   229.4 MiB/s
+blowfish-ctr   224b   229.5 MiB/s   229.7 MiB/s
+blowfish-ctr   232b   229.7 MiB/s   229.7 MiB/s
+blowfish-ctr   240b   229.3 MiB/s   229.5 MiB/s
+blowfish-ctr   248b   229.6 MiB/s   229.8 MiB/s
+blowfish-ctr   256b   229.6 MiB/s   229.5 MiB/s
+blowfish-ctr   264b   229.5 MiB/s   229.7 MiB/s
+blowfish-ctr   272b   229.1 MiB/s   229.3 MiB/s
+blowfish-ctr   280b   228.8 MiB/s   228.8 MiB/s
+blowfish-ctr   288b   229.3 MiB/s   229.6 MiB/s
+blowfish-ctr   296b   229.7 MiB/s   229.9 MiB/s
+blowfish-ctr   304b   229.6 MiB/s   229.5 MiB/s
+blowfish-ctr   312b   228.8 MiB/s   228.9 MiB/s
+blowfish-ctr   320b   228.8 MiB/s   229.3 MiB/s
+blowfish-ctr   328b   229.0 MiB/s   230.3 MiB/s
+blowfish-ctr   336b   229.3 MiB/s   230.1 MiB/s
+blowfish-ctr   344b   229.2 MiB/s   229.7 MiB/s
+blowfish-ctr   352b   228.6 MiB/s   229.7 MiB/s
+blowfish-ctr   360b   226.6 MiB/s   229.9 MiB/s
+blowfish-ctr   368b   227.7 MiB/s   229.7 MiB/s
+blowfish-ctr   376b   229.4 MiB/s   229.8 MiB/s
+blowfish-ctr   384b   206.1 MiB/s   229.6 MiB/s
+blowfish-ctr   392b   229.0 MiB/s   230.0 MiB/s
+blowfish-ctr   400b   229.5 MiB/s   229.9 MiB/s
+blowfish-ctr   408b   228.8 MiB/s   230.0 MiB/s
+blowfish-ctr   416b   229.1 MiB/s   229.9 MiB/s
+blowfish-ctr   424b   229.3 MiB/s   229.8 MiB/s
+blowfish-ctr   432b   228.7 MiB/s   229.8 MiB/s
+blowfish-ctr   440b   229.1 MiB/s   228.9 MiB/s
+blowfish-ctr   448b   229.0 MiB/s   229.9 MiB/s
+blowfish-ecb    32b   230.7 MiB/s   231.3 MiB/s
+blowfish-ecb    40b   231.6 MiB/s   231.0 MiB/s
+blowfish-ecb    48b   231.9 MiB/s   231.4 MiB/s
+blowfish-ecb    56b   232.1 MiB/s   231.3 MiB/s
+blowfish-ecb    64b   231.4 MiB/s   231.1 MiB/s
+blowfish-ecb    72b   232.0 MiB/s   231.4 MiB/s
+blowfish-ecb    80b   231.5 MiB/s   231.2 MiB/s
+blowfish-ecb    88b   231.2 MiB/s   231.2 MiB/s
+blowfish-ecb    96b   231.8 MiB/s   231.7 MiB/s
+blowfish-ecb   104b   231.6 MiB/s   231.1 MiB/s
+blowfish-ecb   112b   231.7 MiB/s   231.2 MiB/s
+blowfish-ecb   120b   231.8 MiB/s   231.2 MiB/s
+blowfish-ecb   128b   232.0 MiB/s   231.6 MiB/s
+blowfish-ecb   136b   231.5 MiB/s   231.2 MiB/s
+blowfish-ecb   144b   231.9 MiB/s   231.2 MiB/s
+blowfish-ecb   152b   185.2 MiB/s   215.9 MiB/s
+blowfish-ecb   160b   233.2 MiB/s   232.8 MiB/s
+blowfish-ecb   168b   233.5 MiB/s   232.5 MiB/s
+blowfish-ecb   176b   233.7 MiB/s   232.9 MiB/s
+blowfish-ecb   184b   233.5 MiB/s   232.5 MiB/s
+blowfish-ecb   192b   233.8 MiB/s   232.8 MiB/s
+blowfish-ecb   200b   233.5 MiB/s   232.4 MiB/s
+blowfish-ecb   208b   233.5 MiB/s   232.6 MiB/s
+blowfish-ecb   216b   233.6 MiB/s   233.1 MiB/s
+blowfish-ecb   224b   233.4 MiB/s   232.4 MiB/s
+blowfish-ecb   232b   231.2 MiB/s   232.4 MiB/s
+blowfish-ecb   240b   233.8 MiB/s   231.9 MiB/s
+blowfish-ecb   248b   233.5 MiB/s   232.8 MiB/s
+blowfish-ecb   256b   233.9 MiB/s   232.7 MiB/s
+blowfish-ecb   264b   233.7 MiB/s   232.5 MiB/s
+blowfish-ecb   272b   232.8 MiB/s   231.9 MiB/s
+blowfish-ecb   280b   233.5 MiB/s   232.3 MiB/s
+blowfish-ecb   288b   233.3 MiB/s   232.4 MiB/s
+blowfish-ecb   296b   233.5 MiB/s   232.7 MiB/s
+blowfish-ecb   304b   233.9 MiB/s   232.4 MiB/s
+blowfish-ecb   312b   233.7 MiB/s   232.5 MiB/s
+blowfish-ecb   320b   233.8 MiB/s   232.3 MiB/s
+blowfish-ecb   328b   233.5 MiB/s   232.0 MiB/s
+blowfish-ecb   336b   233.3 MiB/s   232.2 MiB/s
+blowfish-ecb   344b   233.1 MiB/s   232.0 MiB/s
+blowfish-ecb   352b   233.9 MiB/s   232.7 MiB/s
+blowfish-ecb   360b   233.1 MiB/s   232.3 MiB/s
+blowfish-ecb   368b   233.1 MiB/s   232.2 MiB/s
+blowfish-ecb   376b   233.7 MiB/s   232.1 MiB/s
+blowfish-ecb   384b   233.8 MiB/s   232.6 MiB/s
+blowfish-ecb   392b   233.5 MiB/s   232.4 MiB/s
+blowfish-ecb   400b   233.5 MiB/s   232.2 MiB/s
+blowfish-ecb   408b   233.7 MiB/s   232.4 MiB/s
+blowfish-ecb   416b   233.5 MiB/s   232.5 MiB/s
+blowfish-ecb   424b   233.4 MiB/s   232.3 MiB/s
+blowfish-ecb   432b   233.5 MiB/s   232.5 MiB/s
+blowfish-ecb   440b   233.0 MiB/s   232.3 MiB/s
+blowfish-ecb   448b   233.4 MiB/s   232.5 MiB/s
+blowfish-pcbc    32b    63.7 MiB/s    68.2 MiB/s
+blowfish-pcbc    40b    63.6 MiB/s    68.2 MiB/s
+blowfish-pcbc    48b    63.6 MiB/s    68.1 MiB/s
+blowfish-pcbc    56b    63.7 MiB/s    68.1 MiB/s
+blowfish-pcbc    64b    63.7 MiB/s    68.1 MiB/s
+blowfish-pcbc    72b    63.7 MiB/s    68.1 MiB/s
+blowfish-pcbc    80b    63.7 MiB/s    68.1 MiB/s
+blowfish-pcbc    88b    63.6 MiB/s    68.1 MiB/s
+blowfish-pcbc    96b    63.6 MiB/s    68.1 MiB/s
+blowfish-pcbc   104b    63.7 MiB/s    68.1 MiB/s
+blowfish-pcbc   112b    63.7 MiB/s    68.2 MiB/s
+blowfish-pcbc   120b    63.7 MiB/s    68.2 MiB/s
+blowfish-pcbc   128b    63.6 MiB/s    68.1 MiB/s
+blowfish-pcbc   136b    63.6 MiB/s    68.1 MiB/s
+blowfish-pcbc   144b    61.1 MiB/s    60.7 MiB/s
+blowfish-pcbc   152b    63.7 MiB/s    68.0 MiB/s
+blowfish-pcbc   160b    63.7 MiB/s    68.0 MiB/s
+blowfish-pcbc   168b    63.6 MiB/s    68.0 MiB/s
+blowfish-pcbc   176b    63.6 MiB/s    68.1 MiB/s
+blowfish-pcbc   184b    63.7 MiB/s    68.0 MiB/s
+blowfish-pcbc   192b    63.7 MiB/s    68.1 MiB/s
+blowfish-pcbc   200b    63.7 MiB/s    68.1 MiB/s
+blowfish-pcbc   208b    63.7 MiB/s    68.1 MiB/s
+blowfish-pcbc   216b    63.7 MiB/s    68.1 MiB/s
+blowfish-pcbc   224b    63.7 MiB/s    68.1 MiB/s
+blowfish-pcbc   232b    63.7 MiB/s    68.1 MiB/s
+blowfish-pcbc   240b    63.5 MiB/s    68.0 MiB/s
+blowfish-pcbc   248b    63.7 MiB/s    68.1 MiB/s
+blowfish-pcbc   256b    63.7 MiB/s    68.0 MiB/s
+blowfish-pcbc   264b    63.7 MiB/s    68.0 MiB/s
+blowfish-pcbc   272b    63.7 MiB/s    68.1 MiB/s
+blowfish-pcbc   280b    63.7 MiB/s    67.5 MiB/s
+blowfish-pcbc   288b    63.7 MiB/s    68.1 MiB/s
+blowfish-pcbc   296b    63.7 MiB/s    68.1 MiB/s
+blowfish-pcbc   304b    63.7 MiB/s    68.0 MiB/s
+blowfish-pcbc   312b    63.7 MiB/s    68.1 MiB/s
+blowfish-pcbc   320b    63.7 MiB/s    68.0 MiB/s
+blowfish-pcbc   328b    63.7 MiB/s    68.0 MiB/s
+blowfish-pcbc   336b    63.7 MiB/s    68.1 MiB/s
+blowfish-pcbc   344b    63.7 MiB/s    68.0 MiB/s
+blowfish-pcbc   352b    63.7 MiB/s    68.0 MiB/s
+blowfish-pcbc   360b    63.7 MiB/s    68.0 MiB/s
+blowfish-pcbc   368b    63.6 MiB/s    68.0 MiB/s
+blowfish-pcbc   376b    63.7 MiB/s    68.1 MiB/s
+blowfish-pcbc   384b    63.7 MiB/s    68.0 MiB/s
+blowfish-pcbc   392b    63.6 MiB/s    68.1 MiB/s
+blowfish-pcbc   400b    63.7 MiB/s    68.1 MiB/s
+blowfish-pcbc   408b    63.6 MiB/s    68.1 MiB/s
+blowfish-pcbc   416b    63.7 MiB/s    68.1 MiB/s
+blowfish-pcbc   424b    63.8 MiB/s    68.1 MiB/s
+blowfish-pcbc   432b    63.7 MiB/s    68.2 MiB/s
+blowfish-pcbc   440b    63.7 MiB/s    67.6 MiB/s
+blowfish-pcbc   448b    63.7 MiB/s    68.1 MiB/s
+camellia-cbc   128b   120.6 MiB/s   192.1 MiB/s
+camellia-cbc   192b    83.2 MiB/s   147.2 MiB/s
+camellia-cbc   256b    91.8 MiB/s   146.8 MiB/s
+camellia-ctr   128b   189.0 MiB/s   188.8 MiB/s
+camellia-ctr   192b   145.8 MiB/s   145.5 MiB/s
+camellia-ctr   256b   145.6 MiB/s   145.4 MiB/s
+camellia-ecb   128b   196.3 MiB/s   195.9 MiB/s
+camellia-ecb   192b   149.8 MiB/s   149.3 MiB/s
+camellia-ecb   256b   149.9 MiB/s   149.0 MiB/s
+camellia-lrw   256b   173.3 MiB/s   173.6 MiB/s
+camellia-lrw   320b   136.5 MiB/s   136.5 MiB/s
+camellia-lrw   384b   115.2 MiB/s   135.7 MiB/s
+camellia-pcbc   128b    99.3 MiB/s    99.7 MiB/s
+camellia-pcbc   192b    79.3 MiB/s    78.8 MiB/s
+camellia-pcbc   256b    79.3 MiB/s    78.8 MiB/s
+camellia-xts   256b   176.9 MiB/s   177.8 MiB/s
+camellia-xts   384b   139.3 MiB/s   139.5 MiB/s
+camellia-xts   512b   139.3 MiB/s   139.5 MiB/s
+   cast5-cbc    40b    90.8 MiB/s   280.4 MiB/s
+   cast5-cbc    48b    90.6 MiB/s   280.6 MiB/s
+   cast5-cbc    56b    90.7 MiB/s   280.9 MiB/s
+   cast5-cbc    64b    90.8 MiB/s   280.6 MiB/s
+   cast5-cbc    72b    90.8 MiB/s   280.8 MiB/s
+   cast5-cbc    80b    90.8 MiB/s   280.9 MiB/s
+   cast5-cbc    88b    70.6 MiB/s   216.2 MiB/s
+   cast5-cbc    96b    70.6 MiB/s   216.2 MiB/s
+   cast5-cbc   104b    70.7 MiB/s   216.3 MiB/s
+   cast5-cbc   112b    70.6 MiB/s   216.1 MiB/s
+   cast5-cbc   120b    70.6 MiB/s   216.4 MiB/s
+   cast5-cbc   128b    70.6 MiB/s   215.9 MiB/s
+   cast5-ctr    40b   285.2 MiB/s   285.0 MiB/s
+   cast5-ctr    48b   285.6 MiB/s   285.1 MiB/s
+   cast5-ctr    56b   285.0 MiB/s   284.8 MiB/s
+   cast5-ctr    64b   285.3 MiB/s   205.9 MiB/s
+   cast5-ctr    72b   283.5 MiB/s   282.8 MiB/s
+   cast5-ctr    80b   283.6 MiB/s   284.1 MiB/s
+   cast5-ctr    88b   219.5 MiB/s   218.9 MiB/s
+   cast5-ctr    96b   201.8 MiB/s   215.5 MiB/s
+   cast5-ctr   104b   219.1 MiB/s   218.6 MiB/s
+   cast5-ctr   112b   219.4 MiB/s   219.3 MiB/s
+   cast5-ctr   120b   219.1 MiB/s   219.3 MiB/s
+   cast5-ctr   128b   219.5 MiB/s   219.7 MiB/s
+   cast5-ecb    40b   286.6 MiB/s   285.8 MiB/s
+   cast5-ecb    48b   287.2 MiB/s   286.9 MiB/s
+   cast5-ecb    56b   287.5 MiB/s   286.7 MiB/s
+   cast5-ecb    64b   286.5 MiB/s   286.8 MiB/s
+   cast5-ecb    72b   286.8 MiB/s   286.7 MiB/s
+   cast5-ecb    80b   286.5 MiB/s   286.7 MiB/s
+   cast5-ecb    88b   219.6 MiB/s   220.8 MiB/s
+   cast5-ecb    96b   220.1 MiB/s   221.2 MiB/s
+   cast5-ecb   104b   220.3 MiB/s   221.0 MiB/s
+   cast5-ecb   112b   220.4 MiB/s   221.0 MiB/s
+   cast5-ecb   120b   220.3 MiB/s   221.0 MiB/s
+   cast5-ecb   128b   220.3 MiB/s   221.2 MiB/s
+   cast5-pcbc    40b    79.1 MiB/s    77.8 MiB/s
+   cast5-pcbc    48b    79.0 MiB/s    77.8 MiB/s
+   cast5-pcbc    56b    79.0 MiB/s    77.8 MiB/s
+   cast5-pcbc    64b    79.1 MiB/s    77.8 MiB/s
+   cast5-pcbc    72b    79.1 MiB/s    77.8 MiB/s
+   cast5-pcbc    80b    79.0 MiB/s    77.8 MiB/s
+   cast5-pcbc    88b    63.8 MiB/s    56.8 MiB/s
+   cast5-pcbc    96b    63.7 MiB/s    62.1 MiB/s
+   cast5-pcbc   104b    63.9 MiB/s    62.1 MiB/s
+   cast5-pcbc   112b    63.7 MiB/s    62.1 MiB/s
+   cast5-pcbc   120b    63.8 MiB/s    62.2 MiB/s
+   cast5-pcbc   128b    64.0 MiB/s    62.2 MiB/s
+   cast6-cbc   128b    70.7 MiB/s   145.8 MiB/s
+   cast6-cbc   160b    58.9 MiB/s   135.5 MiB/s
+   cast6-cbc   192b    62.7 MiB/s   144.9 MiB/s
+   cast6-cbc   224b    70.5 MiB/s   144.8 MiB/s
+   cast6-cbc   256b    70.3 MiB/s   144.5 MiB/s
+   cast6-ctr   128b   144.2 MiB/s   144.6 MiB/s
+   cast6-ctr   160b   144.3 MiB/s   144.7 MiB/s
+   cast6-ctr   192b   143.8 MiB/s   144.7 MiB/s
+   cast6-ctr   224b   143.6 MiB/s   144.8 MiB/s
+   cast6-ctr   256b   143.7 MiB/s   144.6 MiB/s
+   cast6-ecb   128b   146.7 MiB/s   146.8 MiB/s
+   cast6-ecb   160b   146.4 MiB/s   146.3 MiB/s
+   cast6-ecb   192b   146.8 MiB/s   146.7 MiB/s
+   cast6-ecb   224b   146.4 MiB/s   146.6 MiB/s
+   cast6-ecb   256b   146.9 MiB/s   147.2 MiB/s
+   cast6-lrw   256b   132.8 MiB/s   133.2 MiB/s
+   cast6-lrw   288b   106.5 MiB/s   121.5 MiB/s
+   cast6-lrw   320b   131.4 MiB/s   132.2 MiB/s
+   cast6-lrw   352b   132.1 MiB/s   132.5 MiB/s
+   cast6-lrw   384b   131.4 MiB/s   132.3 MiB/s
+   cast6-pcbc   128b    64.2 MiB/s    64.5 MiB/s
+   cast6-pcbc   160b    64.1 MiB/s    64.5 MiB/s
+   cast6-pcbc   192b    64.2 MiB/s    64.4 MiB/s
+   cast6-pcbc   224b    58.8 MiB/s    64.5 MiB/s
+   cast6-pcbc   256b    64.2 MiB/s    64.5 MiB/s
+   cast6-xts   256b   143.1 MiB/s   145.0 MiB/s
+   cast6-xts   320b   144.6 MiB/s   144.9 MiB/s
+   cast6-xts   384b   144.4 MiB/s   145.0 MiB/s
+   cast6-xts   448b   144.5 MiB/s   144.7 MiB/s
+   cast6-xts   512b   144.4 MiB/s   144.7 MiB/s
+     des-cbc    64b    46.5 MiB/s    51.2 MiB/s
+     des-ctr    64b    50.7 MiB/s    50.7 MiB/s
+     des-ecb    64b    53.3 MiB/s    53.4 MiB/s
+     des-pcbc    64b    45.8 MiB/s    45.3 MiB/s
+  fcrypt-ecb    64b    88.0 MiB/s    88.4 MiB/s
+  khazad-ecb   128b   128.1 MiB/s   128.5 MiB/s
+    seed-cbc   128b    56.3 MiB/s    58.8 MiB/s
+    seed-ctr   128b    58.7 MiB/s    58.7 MiB/s
+    seed-ecb   128b    60.8 MiB/s    60.8 MiB/s
+    seed-lrw   256b    58.6 MiB/s    58.6 MiB/s
+    seed-pcbc   128b    55.3 MiB/s    54.8 MiB/s
+    seed-xts   256b    56.1 MiB/s    58.9 MiB/s
+ serpent-cbc     8b    57.5 MiB/s   201.1 MiB/s
+ serpent-cbc    16b    57.5 MiB/s   201.1 MiB/s
+ serpent-cbc    24b    57.5 MiB/s   201.1 MiB/s
+ serpent-cbc    32b    57.5 MiB/s   201.2 MiB/s
+ serpent-cbc    40b    57.4 MiB/s   201.1 MiB/s
+ serpent-cbc    48b    57.5 MiB/s   201.1 MiB/s
+ serpent-cbc    56b    57.4 MiB/s   201.1 MiB/s
+ serpent-cbc    64b    57.5 MiB/s   201.3 MiB/s
+ serpent-cbc    72b    57.5 MiB/s   200.9 MiB/s
+ serpent-cbc    80b    57.5 MiB/s   201.3 MiB/s
+ serpent-cbc    88b    57.5 MiB/s   201.2 MiB/s
+ serpent-cbc    96b    57.5 MiB/s   201.0 MiB/s
+ serpent-cbc   104b    57.5 MiB/s   201.0 MiB/s
+ serpent-cbc   112b    57.5 MiB/s   201.0 MiB/s
+ serpent-cbc   120b    57.5 MiB/s   201.1 MiB/s
+ serpent-cbc   128b    57.4 MiB/s   201.4 MiB/s
+ serpent-cbc   136b    57.5 MiB/s   201.5 MiB/s
+ serpent-cbc   144b    57.4 MiB/s   201.3 MiB/s
+ serpent-cbc   152b    57.4 MiB/s   201.2 MiB/s
+ serpent-cbc   160b    57.5 MiB/s   201.3 MiB/s
+ serpent-cbc   168b    57.5 MiB/s   201.0 MiB/s
+ serpent-cbc   176b    57.5 MiB/s   201.2 MiB/s
+ serpent-cbc   184b    57.5 MiB/s   201.3 MiB/s
+ serpent-cbc   192b    57.4 MiB/s   200.8 MiB/s
+ serpent-cbc   200b    57.4 MiB/s   201.0 MiB/s
+ serpent-cbc   208b    57.5 MiB/s   201.1 MiB/s
+ serpent-cbc   216b    57.4 MiB/s   201.0 MiB/s
+ serpent-cbc   224b    57.5 MiB/s   201.5 MiB/s
+ serpent-cbc   232b    57.4 MiB/s   201.7 MiB/s
+ serpent-cbc   240b    57.5 MiB/s   201.4 MiB/s
+ serpent-cbc   248b    57.5 MiB/s   201.3 MiB/s
+ serpent-cbc   256b    57.5 MiB/s   201.6 MiB/s
+ serpent-ctr     8b   209.5 MiB/s   210.0 MiB/s
+ serpent-ctr    16b   210.0 MiB/s   210.4 MiB/s
+ serpent-ctr    24b   209.5 MiB/s   210.1 MiB/s
+ serpent-ctr    32b   209.3 MiB/s   210.3 MiB/s
+ serpent-ctr    40b   209.5 MiB/s   210.0 MiB/s
+ serpent-ctr    48b   209.9 MiB/s   210.1 MiB/s
+ serpent-ctr    56b   209.8 MiB/s   210.4 MiB/s
+ serpent-ctr    64b   210.1 MiB/s   210.3 MiB/s
+ serpent-ctr    72b   210.1 MiB/s   210.6 MiB/s
+ serpent-ctr    80b   209.9 MiB/s   210.5 MiB/s
+ serpent-ctr    88b   209.9 MiB/s   210.1 MiB/s
+ serpent-ctr    96b   209.9 MiB/s   210.2 MiB/s
+ serpent-ctr   104b   210.1 MiB/s   210.5 MiB/s
+ serpent-ctr   112b   210.0 MiB/s   210.2 MiB/s
+ serpent-ctr   120b   209.7 MiB/s   210.2 MiB/s
+ serpent-ctr   128b   210.2 MiB/s   210.4 MiB/s
+ serpent-ctr   136b   209.8 MiB/s   210.3 MiB/s
+ serpent-ctr   144b   210.2 MiB/s   210.5 MiB/s
+ serpent-ctr   152b   209.6 MiB/s   210.2 MiB/s
+ serpent-ctr   160b   210.3 MiB/s   210.5 MiB/s
+ serpent-ctr   168b   203.4 MiB/s   209.5 MiB/s
+ serpent-ctr   176b   207.1 MiB/s   209.6 MiB/s
+ serpent-ctr   184b   206.9 MiB/s   209.3 MiB/s
+ serpent-ctr   192b   177.4 MiB/s   196.5 MiB/s
+ serpent-ctr   200b   210.0 MiB/s   206.9 MiB/s
+ serpent-ctr   208b   208.9 MiB/s   206.6 MiB/s
+ serpent-ctr   216b   210.2 MiB/s   180.7 MiB/s
+ serpent-ctr   224b   187.8 MiB/s   209.7 MiB/s
+ serpent-ctr   232b   207.8 MiB/s   209.6 MiB/s
+ serpent-ctr   240b   208.1 MiB/s   209.6 MiB/s
+ serpent-ctr   248b   181.0 MiB/s   189.2 MiB/s
+ serpent-ctr   256b   209.4 MiB/s   208.4 MiB/s
+ serpent-ecb     8b   190.5 MiB/s   203.0 MiB/s
+ serpent-ecb    16b   212.8 MiB/s   203.0 MiB/s
+ serpent-ecb    24b   212.5 MiB/s   202.7 MiB/s
+ serpent-ecb    32b   194.5 MiB/s   173.7 MiB/s
+ serpent-ecb    40b   214.2 MiB/s   201.2 MiB/s
+ serpent-ecb    48b   214.2 MiB/s   182.0 MiB/s
+ serpent-ecb    56b   213.8 MiB/s   188.7 MiB/s
+ serpent-ecb    64b   176.8 MiB/s   203.0 MiB/s
+ serpent-ecb    72b   212.6 MiB/s   202.6 MiB/s
+ serpent-ecb    80b   212.7 MiB/s   202.8 MiB/s
+ serpent-ecb    88b   203.3 MiB/s   174.0 MiB/s
+ serpent-ecb    96b   215.9 MiB/s   203.9 MiB/s
+ serpent-ecb   104b   215.8 MiB/s   203.9 MiB/s
+ serpent-ecb   112b   215.8 MiB/s   203.9 MiB/s
+ serpent-ecb   120b   215.5 MiB/s   203.4 MiB/s
+ serpent-ecb   128b   215.9 MiB/s   204.0 MiB/s
+ serpent-ecb   136b   215.4 MiB/s   203.8 MiB/s
+ serpent-ecb   144b   215.9 MiB/s   204.0 MiB/s
+ serpent-ecb   152b   215.8 MiB/s   204.0 MiB/s
+ serpent-ecb   160b   215.8 MiB/s   204.0 MiB/s
+ serpent-ecb   168b   215.9 MiB/s   204.0 MiB/s
+ serpent-ecb   176b   215.6 MiB/s   203.9 MiB/s
+ serpent-ecb   184b   215.6 MiB/s   203.9 MiB/s
+ serpent-ecb   192b   216.0 MiB/s   204.2 MiB/s
+ serpent-ecb   200b   215.5 MiB/s   203.8 MiB/s
+ serpent-ecb   208b   215.8 MiB/s   204.0 MiB/s
+ serpent-ecb   216b   215.4 MiB/s   203.6 MiB/s
+ serpent-ecb   224b   215.7 MiB/s   204.0 MiB/s
+ serpent-ecb   232b   215.6 MiB/s   203.9 MiB/s
+ serpent-ecb   240b   215.5 MiB/s   203.8 MiB/s
+ serpent-ecb   248b   215.2 MiB/s   203.8 MiB/s
+ serpent-ecb   256b   215.9 MiB/s   204.1 MiB/s
+ serpent-lrw   128b   185.3 MiB/s   178.7 MiB/s
+ serpent-lrw   136b   184.7 MiB/s   178.1 MiB/s
+ serpent-lrw   144b   185.1 MiB/s   178.6 MiB/s
+ serpent-lrw   152b   184.5 MiB/s   178.2 MiB/s
+ serpent-lrw   160b   175.4 MiB/s   173.6 MiB/s
+ serpent-lrw   168b   184.7 MiB/s   178.2 MiB/s
+ serpent-lrw   176b   185.2 MiB/s   178.5 MiB/s
+ serpent-lrw   184b   184.2 MiB/s   178.3 MiB/s
+ serpent-lrw   192b   184.8 MiB/s   178.4 MiB/s
+ serpent-lrw   200b   184.9 MiB/s   178.4 MiB/s
+ serpent-lrw   208b   184.8 MiB/s   178.4 MiB/s
+ serpent-lrw   216b   184.7 MiB/s   178.3 MiB/s
+ serpent-lrw   224b   184.8 MiB/s   178.4 MiB/s
+ serpent-lrw   232b   184.8 MiB/s   178.4 MiB/s
+ serpent-lrw   240b   184.8 MiB/s   178.4 MiB/s
+ serpent-lrw   248b   184.7 MiB/s   178.3 MiB/s
+ serpent-lrw   256b   185.0 MiB/s   178.5 MiB/s
+ serpent-lrw   264b   185.0 MiB/s   178.5 MiB/s
+ serpent-lrw   272b   185.0 MiB/s   178.4 MiB/s
+ serpent-lrw   280b   184.8 MiB/s   178.4 MiB/s
+ serpent-lrw   288b   184.0 MiB/s   178.1 MiB/s
+ serpent-lrw   296b   185.0 MiB/s   178.4 MiB/s
+ serpent-lrw   304b   184.9 MiB/s   178.5 MiB/s
+ serpent-lrw   312b   185.0 MiB/s   178.4 MiB/s
+ serpent-lrw   320b   184.7 MiB/s   178.4 MiB/s
+ serpent-lrw   328b   184.8 MiB/s   178.4 MiB/s
+ serpent-lrw   336b   185.0 MiB/s   178.5 MiB/s
+ serpent-lrw   344b   185.0 MiB/s   178.4 MiB/s
+ serpent-lrw   352b   184.8 MiB/s   178.1 MiB/s
+ serpent-lrw   360b   184.9 MiB/s   178.4 MiB/s
+ serpent-lrw   368b   185.0 MiB/s   178.5 MiB/s
+ serpent-lrw   376b   184.9 MiB/s   178.5 MiB/s
+ serpent-lrw   384b   185.0 MiB/s   178.6 MiB/s
+ serpent-pcbc     8b    53.5 MiB/s    56.8 MiB/s
+ serpent-pcbc    16b    53.6 MiB/s    56.6 MiB/s
+ serpent-pcbc    24b    53.6 MiB/s    56.7 MiB/s
+ serpent-pcbc    32b    53.6 MiB/s    56.7 MiB/s
+ serpent-pcbc    40b    53.5 MiB/s    56.7 MiB/s
+ serpent-pcbc    48b    53.6 MiB/s    56.6 MiB/s
+ serpent-pcbc    56b    53.5 MiB/s    56.8 MiB/s
+ serpent-pcbc    64b    53.6 MiB/s    56.7 MiB/s
+ serpent-pcbc    72b    53.6 MiB/s    56.7 MiB/s
+ serpent-pcbc    80b    53.6 MiB/s    56.6 MiB/s
+ serpent-pcbc    88b    53.5 MiB/s    56.8 MiB/s
+ serpent-pcbc    96b    53.5 MiB/s    56.6 MiB/s
+ serpent-pcbc   104b    53.6 MiB/s    56.6 MiB/s
+ serpent-pcbc   112b    53.6 MiB/s    56.9 MiB/s
+ serpent-pcbc   120b    53.6 MiB/s    56.8 MiB/s
+ serpent-pcbc   128b    53.5 MiB/s    56.6 MiB/s
+ serpent-pcbc   136b    53.5 MiB/s    56.8 MiB/s
+ serpent-pcbc   144b    53.6 MiB/s    56.6 MiB/s
+ serpent-pcbc   152b    53.6 MiB/s    56.6 MiB/s
+ serpent-pcbc   160b    53.6 MiB/s    56.6 MiB/s
+ serpent-pcbc   168b    53.6 MiB/s    56.7 MiB/s
+ serpent-pcbc   176b    53.6 MiB/s    56.7 MiB/s
+ serpent-pcbc   184b    53.4 MiB/s    56.6 MiB/s
+ serpent-pcbc   192b    53.6 MiB/s    56.6 MiB/s
+ serpent-pcbc   200b    53.6 MiB/s    56.6 MiB/s
+ serpent-pcbc   208b    53.5 MiB/s    56.7 MiB/s
+ serpent-pcbc   216b    53.6 MiB/s    56.7 MiB/s
+ serpent-pcbc   224b    53.4 MiB/s    56.7 MiB/s
+ serpent-pcbc   232b    53.5 MiB/s    56.6 MiB/s
+ serpent-pcbc   240b    53.3 MiB/s    56.7 MiB/s
+ serpent-pcbc   248b    53.6 MiB/s    52.1 MiB/s
+ serpent-pcbc   256b    53.6 MiB/s    56.7 MiB/s
+ serpent-xts    16b   208.1 MiB/s   199.1 MiB/s
+ serpent-xts    32b   208.0 MiB/s   199.3 MiB/s
+ serpent-xts    48b   208.1 MiB/s   199.4 MiB/s
+ serpent-xts    64b   208.2 MiB/s   199.3 MiB/s
+ serpent-xts    80b   208.3 MiB/s   199.4 MiB/s
+ serpent-xts    96b   208.1 MiB/s   199.4 MiB/s
+ serpent-xts   112b   208.3 MiB/s   199.4 MiB/s
+ serpent-xts   128b   208.2 MiB/s   199.2 MiB/s
+ serpent-xts   144b   207.9 MiB/s   198.9 MiB/s
+ serpent-xts   160b   208.3 MiB/s   199.3 MiB/s
+ serpent-xts   176b   208.1 MiB/s   199.4 MiB/s
+ serpent-xts   192b   208.0 MiB/s   199.1 MiB/s
+ serpent-xts   208b   207.9 MiB/s   199.1 MiB/s
+ serpent-xts   224b   207.9 MiB/s   199.2 MiB/s
+ serpent-xts   240b   208.0 MiB/s   199.2 MiB/s
+ serpent-xts   256b   208.0 MiB/s   199.3 MiB/s
+ serpent-xts   272b   208.0 MiB/s   199.3 MiB/s
+ serpent-xts   288b   208.1 MiB/s   199.3 MiB/s
+ serpent-xts   304b   207.9 MiB/s   199.2 MiB/s
+ serpent-xts   320b   208.2 MiB/s   199.4 MiB/s
+ serpent-xts   336b   208.0 MiB/s   199.3 MiB/s
+ serpent-xts   352b   207.9 MiB/s   199.1 MiB/s
+ serpent-xts   368b   208.0 MiB/s   199.3 MiB/s
+ serpent-xts   384b   208.0 MiB/s   199.2 MiB/s
+ serpent-xts   400b   208.2 MiB/s   199.3 MiB/s
+ serpent-xts   416b   208.1 MiB/s   199.3 MiB/s
+ serpent-xts   432b   207.8 MiB/s   199.2 MiB/s
+ serpent-xts   448b   208.3 MiB/s   199.5 MiB/s
+ serpent-xts   464b   208.1 MiB/s   195.3 MiB/s
+ serpent-xts   480b   208.2 MiB/s   199.3 MiB/s
+ serpent-xts   496b   208.1 MiB/s   199.3 MiB/s
+ serpent-xts   512b   208.0 MiB/s   199.0 MiB/s
+     tea-ecb   128b    51.8 MiB/s    50.9 MiB/s
+ twofish-cbc   128b   126.7 MiB/s   239.9 MiB/s
+ twofish-cbc   192b   126.6 MiB/s   239.8 MiB/s
+ twofish-cbc   256b   126.4 MiB/s   239.4 MiB/s
+ twofish-ctr   128b   237.0 MiB/s   237.0 MiB/s
+ twofish-ctr   192b   236.3 MiB/s   236.3 MiB/s
+ twofish-ctr   256b   236.9 MiB/s   237.0 MiB/s
+ twofish-ecb   128b   240.9 MiB/s   241.5 MiB/s
+ twofish-ecb   192b   240.7 MiB/s   241.4 MiB/s
+ twofish-ecb   256b   240.7 MiB/s   241.6 MiB/s
+ twofish-lrw   256b   205.7 MiB/s   206.3 MiB/s
+ twofish-lrw   320b   205.6 MiB/s   206.6 MiB/s
+ twofish-lrw   384b   205.8 MiB/s   206.6 MiB/s
+ twofish-pcbc   128b   101.6 MiB/s   103.2 MiB/s
+ twofish-pcbc   192b   101.6 MiB/s   103.2 MiB/s
+ twofish-pcbc   256b   101.6 MiB/s   103.2 MiB/s
+ twofish-xts   256b   213.5 MiB/s   214.2 MiB/s
+ twofish-xts   384b   200.3 MiB/s   208.8 MiB/s
+ twofish-xts   512b   213.5 MiB/s   214.3 MiB/s
